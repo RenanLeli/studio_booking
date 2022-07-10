@@ -25,4 +25,8 @@ public class Item {
     @JoinColumn(name = "description_id")
     private Text description;
 
+    @ManyToOne
+    @JoinColumn(name = "product_id")
+    private Product product;
+
 }
