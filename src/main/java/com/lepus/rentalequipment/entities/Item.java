@@ -21,4 +21,6 @@ public class Item {
     @JoinColumn(name = "product_id")
     private Product product;
 
+
+
 }
