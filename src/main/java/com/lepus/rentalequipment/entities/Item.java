@@ -9,6 +9,8 @@ import javax.persistence.*;
 @Getter
 @Setter
 @Table(name = "item")
+@MappedSuperclass
+@Inheritance(strategy = InheritanceType.JOINED)
 public class Item {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
