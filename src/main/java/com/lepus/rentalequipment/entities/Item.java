@@ -17,14 +17,6 @@ public class Item {
     @Column(name = "id", nullable = false)
     private Long id;
 
-    @OneToOne(cascade = CascadeType.ALL, orphanRemoval = true)
-    @JoinColumn(name = "title_id")
-    private Text title;
-
-    @OneToOne(cascade = CascadeType.ALL, orphanRemoval = true)
-    @JoinColumn(name = "description_id")
-    private Text description;
-
     @ManyToOne
     @JoinColumn(name = "product_id")
     private Product product;
