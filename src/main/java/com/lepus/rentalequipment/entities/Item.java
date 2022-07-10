@@ -23,12 +23,12 @@ public class Item {
         this.id = id;
     }
 
-    @OneToOne(orphanRemoval = true)
+    @OneToOne(cascade = CascadeType.ALL, orphanRemoval = true)
     @JoinColumn(name = "title_id")
     private Text title;
 
-     @OneToOne(orphanRemoval = true)
+    @OneToOne(cascade = CascadeType.ALL, orphanRemoval = true)
     @JoinColumn(name = "description_id")
     private Text description;
 
- }
+}
